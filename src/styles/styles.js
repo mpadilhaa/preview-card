@@ -2,7 +2,13 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    margin: ${theme.spacing.medium} ${theme.spacing.small};
+    padding: ${theme.spacing.medium} ${theme.spacing.small};
+    height: 100vh;
+
+    @media ${theme.media.medium} {
+      display: flex;
+      align-items: center;
+    }
   `}
 `;
 
@@ -10,12 +16,32 @@ export const Card = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.bgCard};
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
     border-radius: 10px;
+    margin: 0 auto;
+    
+    @media ${theme.media.medium} {
+      display:flex;
+      justify-content: center;
+      max-width:600px;
+      }
+    }
+  `}
+`;
 
-    & img {
+export const CardImg = styled.div`
+  ${({ theme }) => css`
+    img {
       width: 100%;
       border-radius: 10px 10px 0 0;
+      height: 100%;
+    }
+
+    @media ${theme.media.medium} {
+      width: 50%;
+      img {
+        border-radius: 10px 0 0 10px;
+      }
     }
   `}
 `;
@@ -58,6 +84,12 @@ export const Content = styled.div`
       font-size: 14px;
       text-decoration: line-through;
     }
+
+    @media ${theme.media.medium} {
+      width: 50%;
+      gap: ${theme.spacing.medium};
+      padding: 30px;
+    }
   `}
 `;
 
@@ -72,6 +104,12 @@ export const Button = styled.button`
     gap: ${theme.spacing.small};
     justify-content: center;
     align-items: center;
+    transition:.4s all ease-in;
+
+    &:hover {
+      background-color: #06341C;
+      cursor:pointer;
+    }
 
     & img {
       width: 15px;

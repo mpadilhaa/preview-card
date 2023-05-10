@@ -19,4 +19,7 @@ export const theme = {
     medium: "20px",
     big: "25px",
   },
+  media: {
+    medium: "(min-width:820px)",
+  },
 };

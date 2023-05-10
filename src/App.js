@@ -6,7 +6,10 @@ function App() {
     <>
       <Styled.Container>
         <Styled.Card>
-          <img src={imgCard} alt=""></img>
+          <Styled.CardImg>
+            <img src={imgCard} alt=""></img>
+          </Styled.CardImg>
+
           <Styled.Content>
             <h5>Perfume</h5>
             <h1>Gabrielle Essence Eau De Parfum</h1>

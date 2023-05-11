@@ -1,15 +1,12 @@
 import * as Styled from "./styles/styles";
-import imgCard from "./assets/image-product-mobile.jpg";
 import cartIcon from "./assets/icon-cart.svg";
+
 function App() {
   return (
     <>
       <Styled.Container>
         <Styled.Card>
-          <Styled.CardImg>
-            <img src={imgCard} alt=""></img>
-          </Styled.CardImg>
-
+          <Styled.CardImg />
           <Styled.Content>
             <h5>Perfume</h5>
             <h1>Gabrielle Essence Eau De Parfum</h1>

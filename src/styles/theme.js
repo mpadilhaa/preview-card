@@ -16,7 +16,7 @@ export const theme = {
   },
   spacing: {
     small: "15px",
-    medium: "20px",
+    medium: "22px",
     big: "25px",
   },
   media: {

@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import img1 from "../assets/image-product-mobile.jpg";
+import img2 from "../assets/image-product-desktop.jpg";
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -19,6 +21,7 @@ export const Card = styled.div`
     max-width: 450px;
     border-radius: 10px;
     margin: 0 auto;
+   
     
     @media ${theme.media.medium} {
       display:flex;
@@ -31,17 +34,18 @@ export const Card = styled.div`
 
 export const CardImg = styled.div`
   ${({ theme }) => css`
-    img {
-      width: 100%;
-      border-radius: 10px 10px 0 0;
-      height: 100%;
-    }
+    background: url(${img1});
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
 
     @media ${theme.media.medium} {
+      background-image: url(${img2});
       width: 50%;
-      img {
-        border-radius: 10px 0 0 10px;
-      }
+      height: auto;
+      border-radius: 10px 0 0 10px;
     }
   `}
 `;
@@ -104,11 +108,11 @@ export const Button = styled.button`
     gap: ${theme.spacing.small};
     justify-content: center;
     align-items: center;
-    transition:.4s all ease-in;
+    transition: 0.4s all ease-in;
 
     &:hover {
-      background-color: #06341C;
-      cursor:pointer;
+      background-color: #06341c;
+      cursor: pointer;
     }
 
     & img {
